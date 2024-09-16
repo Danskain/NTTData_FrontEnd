@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card custom-border" style="width: 100%; max-width: 600px;">
+    <div class="card-body">
+      <form [formGroup]="loginForm">
+        <p class="text-danger">{{loginError}}</p>
+
+        <!-- Select tipo de documento -->
+        <div class="mb-3">
+          <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+          <select formControlName="tipoDocumento" class="form-select" id="tipoDocumento">
+            <option value="">Seleccione tipo de documento</option>
+            <option value="cedula">Cédula de ciudadanía</option>
+            <option value="pasaporte">Pasaporte</option>
+          </select>
+          <div *ngIf="tipoDocumento.invalid && (tipoDocumento.dirty || tipoDocumento.touched)" class="text-danger">
+            <div *ngIf="tipoDocumento.errors?.['required']">El tipo de documento es requerido.</div>
+          </div>
+        </div>
+
+        <!-- Input número de documento -->
+        <div class="mb-3">
+          <label for="numeroDocumento" class="form-label">Número de Documento</label>
+          <input formControlName="numeroDocumento" type="text" class="form-control" id="numeroDocumento"
+            (input)="formatNumber($event)">
+          <div *ngIf="numeroDocumento.invalid && (numeroDocumento.dirty || numeroDocumento.touched)" class="text-danger">
+            <div *ngIf="numeroDocumento.errors?.['required']">El número de documento es requerido.</div>
+            <div *ngIf="numeroDocumento.errors?.['minlength']">Debe tener al menos 8 caracteres.</div>
+            <div *ngIf="numeroDocumento.errors?.['maxlength']">No puede tener más de 15 caracteres.</div>
+          </div>
+        </div>
+
+        <!-- Botón Buscar -->
+        <button type="submit" (click)="login()" class="btn btn-primary rounded-pill px-4 py-2" [disabled]="loginForm.invalid">Buscar</button>
+      </form>
+    </div>
+  </div>
+</div>
+

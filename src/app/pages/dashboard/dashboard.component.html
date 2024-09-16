@@ -1,0 +1,72 @@
+<app-nav></app-nav>
+<p *ngIf="!userLoginOn">Usuario NO autenticado</p>
+<p *ngIf="userLoginOn">Usuario Autenticado</p>
+<div *ngIf="userLoginOn">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card custom-border">
+          <div class="card-header text-left">
+            <h4>Información Básica</h4>
+          </div>
+          <div class="card-body">
+            <div class="row mb-3">
+              <label for="tipoDocumento" class="col-sm-4 col-form-label">Tipo Documento:</label>
+              <div class="col-sm-8">
+                <input type="text" id="tipoDocumento" class="form-control" [value]="userData?.tipoDocumento" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="numeroDocumento" class="col-sm-4 col-form-label">Número Documento:</label>
+              <div class="col-sm-8">
+                <input type="text" id="numeroDocumento" class="form-control" [value]="userData?.numeroDocumento" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Primer Nombre:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.primerNombre" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Segundo Nombre:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.segundoNombre" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Primer Apellido:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.primerApellido" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Segundo Apellido:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.segundoApellido" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Telefono:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.telefono" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Direccion:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.direccion" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="primerNombre" class="col-sm-4 col-form-label">Ciudad:</label>
+              <div class="col-sm-8">
+                <input type="text" id="primerNombre" class="form-control" [value]="userData?.ciudad" disabled>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+div {
+  margin: 15px;
+}
+
+.custom-border {
+  border: 2px solid #007bff; /* Color azul claro */
+}

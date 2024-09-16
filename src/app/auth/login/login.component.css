@@ -1,0 +1,23 @@
+form {
+  margin: 20px;
+}
+
+.custom-border {
+  border: 2px solid #007bff; /* Color azul claro */
+}
+
+.btn-primary {
+  background-color: #003366; /* Azul oscuro */
+  border-color: #003366; /* Azul oscuro */
+}
+
+.btn-primary:hover {
+  background-color: #002244; /* Azul más oscuro al pasar el mouse */
+  border-color: #002244; /* Azul más oscuro al pasar el mouse */
+}
+
+.btn-primary:disabled {
+  background-color: #cccccc; /* Gris para el estado desactivado */
+  border-color: #cccccc; /* Gris para el estado desactivado */
+  color: #666666; /* Color del texto cuando está desactivado */
+}
